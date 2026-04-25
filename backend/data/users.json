@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Admin",
+    "dob": "2026-04-26",
+    "age": 2,
+    "gender": "Female",
+    "address": "Malegaon, Nashik",
+    "email": "admin@123.com",
+    "passwordHash": "$2b$12$w78IBA1/V48butehzACwROgmHCVlT9LHbHyQRwmcTJE2Ne2E6EjeS",
+    "role": "user",
+    "createdAt": "2026-04-25T21:14:14.478Z"
+  }
+]

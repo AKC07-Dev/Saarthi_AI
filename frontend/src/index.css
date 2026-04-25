@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Saarthi AI — Design System
+   All colors HSL. Tokens drive every surface, accent, shadow & gradient.
+*/
+
+@layer base {
+  :root {
+    /* Brand surfaces */
+    --background: 210 40% 98%;          /* #F8FAFC */
+    --foreground: 220 39% 11%;          /* #111827 */
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 39% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 39% 11%;
+
+    /* Brand */
+    --primary: 224 64% 33%;             /* deep blue #1E3A8A */
+    --primary-foreground: 210 40% 98%;
+    --primary-glow: 217 91% 60%;        /* #3B82F6 */
+
+    --secondary: 173 84% 32%;           /* teal #0D9488 */
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 38 92% 50%;               /* orange #F59E0B */
+    --accent-foreground: 220 39% 11%;
+
+    --muted: 215 25% 94%;
+    --muted-foreground: 215 16% 40%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 60% 36%;
+    --warning: 38 92% 50%;
+
+    --border: 215 25% 88%;
+    --input: 215 25% 90%;
+    --ring: 224 64% 33%;
+
+    --radius: 1rem;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(224 64% 33%) 0%, hsl(217 91% 60%) 50%, hsl(173 84% 38%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(210 40% 98%) 0%, hsl(215 40% 95%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(215 30% 98%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(38 92% 55%), hsl(28 92% 50%));
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(220 39% 11% / 0.05);
+    --shadow-md: 0 4px 12px -2px hsl(220 39% 11% / 0.08), 0 2px 4px -2px hsl(220 39% 11% / 0.04);
+    --shadow-lg: 0 20px 40px -12px hsl(224 64% 33% / 0.18);
+    --shadow-glow: 0 0 0 4px hsl(217 91% 60% / 0.15);
+
+    /* Motion */
+    --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222 41% 8%;           /* #0B1220 */
+    --foreground: 220 14% 90%;          /* #E5E7EB */
+
+    --card: 220 39% 11%;                /* #111827 */
+    --card-foreground: 220 14% 90%;
+
+    --popover: 220 39% 11%;
+    --popover-foreground: 220 14% 90%;
+
+    --primary: 217 91% 60%;             /* #3B82F6 */
+    --primary-foreground: 222 41% 8%;
+    --primary-glow: 217 91% 70%;
+
+    --secondary: 173 80% 40%;           /* #14B8A6 */
+    --secondary-foreground: 222 41% 8%;
+
+    --accent: 38 92% 55%;
+    --accent-foreground: 222 41% 8%;
+
+    --muted: 220 30% 16%;
+    --muted-foreground: 220 14% 65%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 55% 50%;
+    --warning: 38 92% 55%;
+
+    --border: 220 30% 18%;
+    --input: 220 30% 18%;
+    --ring: 217 91% 60%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(224 64% 25%) 0%, hsl(217 91% 45%) 50%, hsl(173 80% 30%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(222 41% 8%) 0%, hsl(220 39% 11%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(220 39% 11%) 0%, hsl(220 35% 13%) 100%);
+
+    --shadow-md: 0 4px 12px -2px hsl(0 0% 0% / 0.4);
+    --shadow-lg: 0 20px 40px -12px hsl(0 0% 0% / 0.6);
+    --shadow-glow: 0 0 0 4px hsl(217 91% 60% / 0.25);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+
+  html {
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background-image: var(--gradient-soft);
+    background-attachment: fixed;
+    transition: background-color var(--transition-base), color var(--transition-base);
+  }
+
+  h1, h2, h3, h4 {
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .gradient-hero { background-image: var(--gradient-hero); }
+  .gradient-card { background-image: var(--gradient-card); }
+  .gradient-accent { background-image: var(--gradient-accent); }
+  .text-gradient {
+    background-image: var(--gradient-hero);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .shadow-elegant { box-shadow: var(--shadow-md); }
+  .shadow-elevated { box-shadow: var(--shadow-lg); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .transition-base { transition: all var(--transition-base); }
+  .transition-spring { transition: all var(--transition-spring); }
+
+  .field-fill-anim {
+    animation: fieldFill 600ms ease-out both;
+  }
+}
+
+@keyframes fieldFill {
+  0%   { background-color: hsl(var(--primary) / 0.18); box-shadow: 0 0 0 4px hsl(var(--primary) / 0.18); }
+  60%  { background-color: hsl(var(--success) / 0.12); box-shadow: 0 0 0 3px hsl(var(--success) / 0.18); }
+  100% { background-color: transparent; box-shadow: none; }
+}
+
+@keyframes softPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.55; }
+}
+.animate-soft-pulse { animation: softPulse 1.8s ease-in-out infinite; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up { animation: fadeUp 400ms ease-out both; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
