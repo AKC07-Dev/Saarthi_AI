@@ -98,7 +98,7 @@ function startServer(port, attempt = 1) {
   return server;
 }
 
-startServer(PORT);
+startServer(process.env.PORT||5001);
 
 process.on('unhandledRejection', (reason) => {
   console.error('🔥 Unhandled Rejection:', reason);
