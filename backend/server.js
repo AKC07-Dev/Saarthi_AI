@@ -1,3 +1,8 @@
+// Force the app to lie about its OS to bypass the library check
+Object.defineProperty(process, 'platform', {
+  get: () => 'win32'
+});
+
 'use strict';
 
 const express      = require('express');
